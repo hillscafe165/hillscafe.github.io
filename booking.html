@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book a Table — Hills Cafe</title>
+<meta name="description" content="Reserve a table at Hills Cafe, Naihati, and pay an advance to hold your booking.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="logo">Hills<span>Cafe</span></a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="booking.html" aria-current="page">Book a Table</a>
+      <a class="nav-call" href="tel:+919163692705">📞 91636 92705</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+  </div>
+</header>
+
+<section class="menu-hero">
+  <div class="wrap">
+    <h1>Book a table</h1>
+    <p>Fill this in and it opens a WhatsApp message to Hills Cafe with your details — a real person confirms it from there. For big groups, calling ahead still works best.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap booking-grid">
+
+    <div>
+      <form class="booking-form" id="booking-form" novalidate>
+        <h3>Reservation details</h3>
+
+        <div class="form-row">
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="field">
+            <label for="phone">Phone number</label>
+            <input type="tel" id="phone" name="phone" placeholder="98765 43210" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="field">
+            <label for="date">Date</label>
+            <input type="date" id="date" name="date" required>
+          </div>
+          <div class="field">
+            <label for="time">Time</label>
+            <input type="time" id="time" name="time" value="19:00" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="field">
+            <label for="guests">Number of guests</label>
+            <select id="guests" name="guests">
+              <option>1</option><option>2</option><option selected>3</option><option>4</option>
+              <option>5</option><option>6</option><option>7</option><option>8+</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="seating">Seating preference</label>
+            <select id="seating" name="seating">
+              <option>No preference</option>
+              <option>Window / marble tables</option>
+              <option>Lounge corner</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="notes">Anything we should know? (optional)</label>
+          <textarea id="notes" name="notes" placeholder="Birthday, allergies, high chair needed, etc."></textarea>
+        </div>
+
+        <p class="form-error" id="form-error"></p>
+
+        <button type="submit" class="btn btn-primary">Send booking request on WhatsApp</button>
+        <p class="form-note">This opens WhatsApp with your details pre-filled. Nothing is booked until Hills Cafe replies to confirm. Prefer to call? <a href="tel:+919163692705" style="text-decoration:underline; color:var(--gold-bright);">91636 92705</a>.</p>
+      </form>
+
+      <div class="confirm-panel" id="confirm-panel">
+        <strong>Message ready.</strong> WhatsApp should have opened in a new tab with your booking request. If it didn't open, make sure WhatsApp is installed, or call us directly at <a href="tel:+919163692705">91636 92705</a>.
+      </div>
+    </div>
+
+    <div class="payment-card">
+      <h3>Hold your table with an advance</h3>
+      <p class="sub">Optional — pay a small advance by UPI and it's set aside as a credit against your bill.</p>
+
+      <div class="amount-options" id="amount-options">
+        <button type="button" data-amount="100">₹100</button>
+        <button type="button" data-amount="200" class="active">₹200</button>
+        <button type="button" data-amount="500">₹500</button>
+      </div>
+
+      <a class="btn btn-dark" id="upi-pay-btn" href="#" style="width:100%; justify-content:center;">Pay ₹200 via UPI</a>
+
+      <div class="payment-status" id="payment-status">
+        Online payment isn't switched on for Hills Cafe yet — this button will start working as soon as a UPI ID is added. For now, please pay the advance in person or ask the staff for a payment link when you call.
+      </div>
+
+      <p class="form-note" style="margin-top:18px;">Advances are only needed for larger groups or peak evening slots — most walk-ins don't need one.</p>
+    </div>
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="logo">Hills<span>Cafe</span></div>
+        <p>First floor, 29 RBC, Rishi Bankim Chandra Rd,<br>Naihati, West Bengal 743165</p>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <ul class="footer-list">
+          <li><a href="menu.html">Full menu</a></li>
+          <li><a href="booking.html">Book a table</a></li>
+          <li><a href="about.html">About the cafe</a></li>
+          <li><a href="contact.html">Contact &amp; directions</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Visit</h3>
+        <ul class="footer-list">
+          <li>Open daily, 11:00am – 10:30pm</li>
+          <li><a href="tel:+919163692705">+91 91636 92705</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Hills Cafe, Naihati</span>
+      <span>Site built for Hills Cafe</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/booking.js"></script>
+</body>
+</html>
